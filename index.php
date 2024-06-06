@@ -29,17 +29,21 @@ include_once('parcial.php');
                 <?php
 
 $rs = $con->query("SELECT * FROM afazeres");
-while($Pro = $rs->fetch(PDO::FETCH_OBJ)){
+while($row = $rs->fetch(PDO::FETCH_OBJ)){
 
     echo '
-    <tr class="border-b">
+    <trclass="border-b">
     <td class="py-2 px-4 text-sm text-gray-700">Estudar Matemática</td>
     <td class="py-2 px-4 text-sm text-gray-700">Revisar álgebra linear</td>
     <td class="py-2 px-4 text-sm text-gray-700">Pendente</td>
     <td class="py-2 px-4 text-sm text-gray-700">22/05/2024</td>
 </tr>
 
-
+<thead>
+                                              
+                                                <td>TITULO</td>
+                                            </thead>
+                                            <h2>'. $row->name .'</h2>
 
       '
     ;
